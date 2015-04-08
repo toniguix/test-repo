@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<opc>
+
+  <configure net_mode="static"
+         config_path="C:\Users\Toni\Documents\" csv_log="false" udp_port="7110"
+          timestamp="system" tag_separator="--" debug="true" debug_path="C:\"
+         debug_file_type="daily_log" opc_log="true" watch_dog_time="60"
+         dreg_order="hi_lo" odbc_log="true" db_type="mysql"
+         odbc_source="qsw087.proquimia.com" odbc_user="qsw087"
+         odbc_crypted_password="Q3ByZDMzNzk=" odbc_write="10"
+         odbc_millisec="false" odbc_error="retry" log_filter="false"
+         aliases="false" restore="true" backup_time="5" updateable="true"
+         scientific_notation="false" decimal_symbol="." csv_separator="," />
+
+  <!---->
+
+  <network name="PRQ201 LAB_SARO" ip_receiver="193.152.81.183"
+         ip_header_receiver="193.152.81.183" ip_header_sender="5.10.205.203"
+         udp_port="7110" timeout="12" retries="3" add_crc="true"
+         dreg_order="hi_lo" module_type="mt101" odbc_msg_log="true"
+         odbc_read_table="mt_read" odbc_logger_table="mt_logger" update="false"
+          expire_time="0" active="false" buf_log_res="" buf_log_addr="1024"
+         debug="true" enable="true">
+    <!--Timestamp-->
+
+    <modbus name="PRQ201 LAB_SARO" id="1" type="registers"
+         format="int2" signed="false" address="179" size="9" block="false"
+         interval="60" start="00:00:00" stop="23:59:59" day_of_week="1111111"
+         odbc_data_log="true" debug="true" />
+  </network>
+</opc>
